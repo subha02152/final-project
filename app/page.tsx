@@ -20,19 +20,19 @@ export default function HomePage() {
             Transforming spaces with innovative design solutions for both interior and exterior environments
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-amber-500 hover:bg-amber-600 text-black font-semibold">
+            <Button asChild className="bg-amber-500 hover:bg-amber-600 text-black font-semibold px-6 py-3 text-lg">
               <Link href="/services">
                 View Our Services <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-black"
-            >
-              <Link href="/contact">Contact Us</Link>
-            </Button>
+  asChild
+  variant="outline"
+  size="lg"
+  className="border-white text-black hover:bg-white hover:text-black"
+>
+  <Link href="/contact">Contact Us</Link>
+</Button>
           </div>
         </div>
       </section>
@@ -172,14 +172,14 @@ export default function HomePage() {
             <Button asChild size="lg" className="bg-amber-500 hover:bg-amber-600 text-black">
               <Link href="/contact">Get Free Consultation</Link>
             </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-black"
-            >
-              <Link href="/about">Learn About Us</Link>
-            </Button>
+          <Button
+  asChild
+  variant="outline"
+  size="lg"
+  className="border-white text-black hover:bg-white hover:text-black"
+>
+  <Link href="/about">Learn About Us</Link>
+</Button>
           </div>
         </div>
       </section>

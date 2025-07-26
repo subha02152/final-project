@@ -22,7 +22,6 @@ export function Footer() {
               <a href="#" className="text-gray-300 hover:text-amber-400 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-             
             </div>
           </div>
 
@@ -86,20 +85,33 @@ export function Footer() {
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-amber-400" />
                 <a
-                  href="sarathmcdc1994@gmail.com"
+                  href="mailto:sarathmcdc1994@gmail.com"
                   className="text-gray-300 hover:text-amber-400 transition-colors"
                 >
-                  sarathmcdc1994.com
+                  sarathmcdc1994@gmail.com
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center">
+        {/* Footer Bottom with Developer Credit */}
+        <div className="border-t border-gray-700 mt-12 pt-8 text-center space-y-2">
           <p className="text-gray-300">
             © 2025 Neesh Interior & Exterior. All rights reserved. |
             <span className="text-amber-400"> Designed with excellence</span>
+          </p>
+          <p className="text-gray-300 flex justify-center items-center gap-4 text-sm">
+            Developed by
+            <a href="https://github.com/subha02152/subha02152" target="_blank" className="hover:text-amber-400 transition flex items-center gap-1">
+              Subha
+              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="16" height="16" />
+            </a>
+            &
+            <a href="https://github.com/Saran-ex/ITS-ME" target="_blank" className="hover:text-amber-400 transition flex items-center gap-1">
+              Saran
+              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="16" height="16" />
+            </a>
           </p>
         </div>
       </div>

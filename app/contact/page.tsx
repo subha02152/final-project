@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -19,19 +18,49 @@ export default function ContactPage() {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
-    alert("Thank you for your message! We will get back to you soon.")
-    setFormData({ name: "", email: "", phone: "", service: "", message: "" })
-  }
+  const [loading, setLoading] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     })
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!res.ok) {
+        const errorData = await res.json()
+        alert(`❌ Error: ${errorData.error}`)
+      } else {
+        alert("✅ Thank you for your message! We will get back to you soon.")
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        })
+      }
+    } catch (error) {
+      console.error("Submit error:", error)
+      alert("⚠️ Something went wrong. Please try again later.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -134,8 +163,12 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    <Button type="submit" className="w-full bg-amber-500 hover:bg-amber-600 text-black">
-                      Send Message
+                    <Button
+                      type="submit"
+                      disabled={loading}
+                      className="w-full bg-amber-500 hover:bg-amber-600 text-black"
+                    >
+                      {loading ? "Sending..." : "Send Message"}
                     </Button>
                   </form>
                 </CardContent>
@@ -154,10 +187,8 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-slate-800">Our Office</h3>
                       <p className="text-gray-600">
-                        Opp. Durga Dying, Ellampillai Main Road
-                        <br />
-                        Kakapalayam, Salem - 637504
-                        <br />
+                        Opp. Durga Dying, Ellampillai Main Road<br />
+                        Kakapalayam, Salem - 637504<br />
                         Tamil Nadu, India
                       </p>
                     </div>
@@ -167,8 +198,8 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-amber-500 mt-1" />
                     <div>
                       <h3 className="font-semibold text-slate-800">Phone</h3>
-                      <p className="text-gray-600">+91  9080825986</p>
-                      <p className="text-gray-600">+91  9629302934</p>
+                      <p className="text-gray-600">+91 9080825986</p>
+                      <p className="text-gray-600">+91 9629302934</p>
                     </div>
                   </div>
 

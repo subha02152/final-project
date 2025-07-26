@@ -1,3 +1,4 @@
+"use client"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Star, Quote } from "lucide-react"
@@ -63,148 +64,35 @@ export default function AboutPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center p-6">
-              <CardContent className="pt-6">
-                <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Star className="h-8 w-8 text-amber-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-3">Excellence</h3>
-                <p className="text-gray-600">
-                  We strive for perfection in every detail, ensuring the highest quality in all our work.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-6">
-              <CardContent className="pt-6">
-                <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Quote className="h-8 w-8 text-amber-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-3">Innovation</h3>
-                <p className="text-gray-600">
-                  We embrace new technologies and design trends to deliver cutting-edge solutions.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-6">
-              <CardContent className="pt-6">
-                <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Star className="h-8 w-8 text-amber-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-3">Integrity</h3>
-                <p className="text-gray-600">
-                  Honest communication and transparent practices form the foundation of our relationships.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-6">
-              <CardContent className="pt-6">
-                <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Star className="h-8 w-8 text-amber-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-3">Sustainability</h3>
-                <p className="text-gray-600">
-                  We prioritize eco-friendly materials and practices for a better tomorrow.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">Meet Our Expert Team</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our skilled professionals bring years of experience and passion to every project
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               {
-                name: "Sarath Kumar",
-                role: "Founder and Owner",
-                experience: "12+ years",
-                image: "exterior design.jpg",
+                icon: <Star className="h-8 w-8 text-amber-600" />,
+                title: "Excellence",
+                desc: "We strive for perfection in every detail, ensuring the highest quality in all our work.",
               },
               {
-                name: "Naveen Krishnan",
-                role: "Project Manager",
-                experience: "8+ years",
-                image: "/placeholder.svg",
+                icon: <Quote className="h-8 w-8 text-amber-600" />,
+                title: "Innovation",
+                desc: "We embrace new technologies and design trends to deliver cutting-edge solutions.",
               },
-              
-            ].map((member, index) => (
-              <Card key={index} className="text-center overflow-hidden">
-                <CardContent className="p-0">
-                  <Image
-                    src={member.image || "glass.jpg"}
-                    alt={member.name}
-                    width={300}
-                    height={300}
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-slate-800 mb-1">{member.name}</h3>
-                    <p className="text-amber-600 font-medium mb-2">{member.role}</p>
-                    <p className="text-gray-600 text-sm">{member.experience} experience</p>
+              {
+                icon: <Star className="h-8 w-8 text-amber-600" />,
+                title: "Integrity",
+                desc: "Honest communication and transparent practices form the foundation of our relationships.",
+              },
+              {
+                icon: <Star className="h-8 w-8 text-amber-600" />,
+                title: "Sustainability",
+                desc: "We prioritize eco-friendly materials and practices for a better tomorrow.",
+              },
+            ].map((item, index) => (
+              <Card key={index} className="text-center p-6">
+                <CardContent className="pt-6">
+                  <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {item.icon}
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">What Our Clients Say</h2>
-            <p className="text-lg text-gray-600">Real feedback from satisfied customers</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Suresh ",
-                project: "Complete Home Interior",
-                rating: 5,
-                testimonial:
-                  "Exceptional work! The team transformed our home beyond our expectations. The attention to detail and quality of work is outstanding.",
-              },
-              {
-                name: "Meera anand",
-                project: "Office False Ceiling",
-                rating: 5,
-                testimonial:
-                  "Professional service from start to finish. The false ceiling design has completely changed the look of our office space.",
-              },
-              {
-                name: "aadhil",
-                project: "Exterior Glass Work",
-                rating: 5,
-                testimonial:
-                  "The glass installation work was flawless. The team was punctual, professional, and delivered exactly what was promised.",
-              },
-            ].map((testimonial, index) => (
-              <Card key={index} className="p-6">
-                <CardContent className="pt-0">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-amber-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-600 mb-4 italic">"{testimonial.testimonial}"</p>
-                  <div>
-                    <p className="font-semibold text-slate-800">{testimonial.name}</p>
-                    <p className="text-sm text-gray-500">{testimonial.project}</p>
-                  </div>
+                  <h3 className="text-xl font-semibold text-slate-800 mb-3">{item.title}</h3>
+                  <p className="text-gray-600">{item.desc}</p>
                 </CardContent>
               </Card>
             ))}

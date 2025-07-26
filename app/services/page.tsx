@@ -212,14 +212,13 @@ export default function ServicesPage() {
                 <Button asChild size="lg" className="bg-amber-500 hover:bg-amber-600 text-black">
                   <Link href="/contact">Contact Us</Link>
                 </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="border-white text-white hover:bg-white hover:text-black"
-                >
-                  <Link href="/about">Learn More About Us</Link>
-                </Button>
+               <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-white text-black hover:bg-white hover:text-black">
+                <Link href="/about">Learn More About Us</Link>
+              </Button>
               </div>
             </CardContent>
           </Card>
