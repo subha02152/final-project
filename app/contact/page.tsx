@@ -227,10 +227,18 @@ export default function ContactPage() {
               <Card className="bg-green-50 border-green-200">
                 <CardContent className="pt-6">
                   <div className="flex items-center space-x-4">
+                    {/* WhatsApp Icon */}
                     <MessageCircle className="h-8 w-8 text-green-600" />
+                    
+                    {/* Text and Button */}
                     <div>
-                      <h3 className="font-semibold text-slate-800">Quick WhatsApp Contact</h3>
-                      <p className="text-gray-600 mb-3">Get instant responses to your queries</p>
+                      <h3 className="font-semibold text-slate-800">
+                        Quick WhatsApp Contact
+                      </h3>
+                      <p className="text-gray-600 mb-3">
+                        Get instant responses to your queries
+                      </p>
+                      {/* WhatsApp Chat Button */}
                       <Button asChild className="bg-green-600 hover:bg-green-700">
                         <a
                           href="https://wa.me/919080825986?text=Hi%20Neesh%20Interior%20%26%20Exterior%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
