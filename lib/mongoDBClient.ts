@@ -1,7 +1,16 @@
 import { MongoClient } from "mongodb";
 
 const uri = process.env.MONGODB_URI!;
-const options = {};
+
+// Atlas-optimized options
+const options = {
+  maxPoolSize: 10,
+  serverSelectionTimeoutMS: 10000,
+  socketTimeoutMS: 45000,
+  family: 4, // Use IPv4
+  retryWrites: true,
+  w: 'majority'
+};
 
 let client: MongoClient;
 let clientPromise: Promise<MongoClient>;
@@ -19,13 +28,30 @@ if (!process.env.MONGODB_URI) {
 // Reuse the connection in development
 if (process.env.NODE_ENV === "development") {
   if (!global._mongoClientPromise) {
+    const options = {
+      maxPoolSize: 10,
+      serverSelectionTimeoutMS: 10000,
+      socketTimeoutMS: 45000,
+      family: 4, // Use IPv4
+      retryWrites: true,
+      w: 1
+    };
     client = new MongoClient(uri, options);
     global._mongoClientPromise = client.connect();
   }
   clientPromise = global._mongoClientPromise!;
 } else {
   // Always create a new client in production
+  const options = {
+    maxPoolSize: 10,
+    serverSelectionTimeoutMS: 10000,
+    socketTimeoutMS: 45000,
+    family: 4, // Use IPv4
+    retryWrites: true,
+    w: 1
+  };
   client = new MongoClient(uri, options);
+  global._mongoClientPromise = client.connect();
   clientPromise = client.connect();
 }
 
