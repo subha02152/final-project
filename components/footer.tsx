@@ -15,14 +15,7 @@ export function Footer() {
               Transforming spaces with innovative design solutions for both interior and exterior environments. Your
               trusted partner in creating exceptional spaces.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-amber-400 transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-amber-400 transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-            </div>
+          
           </div>
 
           {/* Quick Links */}

@@ -41,12 +41,7 @@ export function Navigation() {
                 {item.name}
               </Link>
             ))}
-            <Button asChild className="bg-amber-500 hover:bg-amber-600 text-black">
-              <a href="tel:+919876543210">
-                <Phone className="h-4 w-4 mr-2" />
-                Call Now
-              </a>
-            </Button>
+            
           </div>
 
           {/* Mobile menu button */}

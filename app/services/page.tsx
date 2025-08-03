@@ -49,7 +49,7 @@ export default function ServicesPage() {
     {
       title: "Aluminium Fabrication",
       description: "Custom aluminium fabrication services for modern architectural needs with precision engineering.",
-      image: "https://imgs.search.brave.com/iZZrtZFlkvwcNXgzNqzA4aALWhQb5Roxi71f_rdPb6Q/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTIz/MTE1ODcyL3Bob3Rv/L3N0ZWVsLXR1YmVz/LWF0LW1ldGFsLXdv/cmstZmFjdG9yeS5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/TVViVEJocTBJa3Jn/NFlBSUhIcmx4NkJx/WV9aTWstUEVXVnFC/TWJSaVpGYz0",
+      image: "https://mir-s3-cdn-cf.behance.net/projects/404/a529d5229453039.Y3JvcCwxNTQwLDEyMDQsMCwzMDQ.jpg",
       benefits: [
         "Lightweight yet strong construction",
         "Corrosion resistant and durable",

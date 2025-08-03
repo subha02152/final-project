@@ -20,7 +20,7 @@ const slides = [
     title: "Exterior Design",
   },
   {
-    image: "https://imgs.search.brave.com/FkNPlO8FOQzyzSj9tnHl6fRcLVznYd52xlIAn-bX1Jg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9TRUxMRVIvRGVm/YXVsdC8yMDI0LzEw/LzQ1OTMxMjIxNC9K/SC9RQy9TRS82ODE2/NTA2My9zcy13YWxs/LWhhbmRsZS1yYWls/aW5nLTUwMHg1MDAu/anBn",
+    image: "https://mir-s3-cdn-cf.behance.net/projects/404/a529d5229453039.Y3JvcCwxNTQwLDEyMDQsMCwzMDQ.jpg",
     alt: "Stainless Steel Railing and Aluminium Work",
     title: "Metal Fabrication",
   },
