@@ -49,7 +49,7 @@ export default function ServicesPage() {
     {
       title: "Aluminium Fabrication",
       description: "Custom aluminium fabrication services for modern architectural needs with precision engineering.",
-      image: "https://mir-s3-cdn-cf.behance.net/projects/404/a529d5229453039.Y3JvcCwxNTQwLDEyMDQsMCwzMDQ.jpg",
+      image: "https://5.imimg.com/data5/ANDROID/Default/2024/9/453837661/SR/KX/AF/73993451/product-jpeg-500x500.jpeg",
       benefits: [
         "Lightweight yet strong construction",
         "Corrosion resistant and durable",
@@ -106,7 +106,7 @@ export default function ServicesPage() {
     {
       title: "Exterior Elevation (Glass & ACP Cladding)",
       description: "Stunning facade designs using glass and ACP cladding to create impressive exterior elevations.",
-      image: "https://imgs.search.brave.com/Z6ZA5LHp6YquFBEMfDk6HBhJfPxuk-12dXevIUu_rfM/rs:fit:500:0:0:0/g:ce/aHR0cDovL2xpZmVv/ZmFuYXJjaGl0ZWN0/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxNi8wOC9za2V0/Y2hpbmctYXJjaGl0/ZWN0dXJhbC1leHRl/cmlvci1lbGV2YXRp/b25zLTYwMHg0NTAu/anBn",
+      image: "https://mir-s3-cdn-cf.behance.net/projects/404/a529d5229453039.Y3JvcCwxNTQwLDEyMDQsMCwzMDQ.jpg",
       benefits: [
         "Enhanced building aesthetics",
         "Weather protection and insulation",

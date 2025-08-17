@@ -56,5 +56,6 @@ export async function POST(req: Request) {
   }, { status: 500 });
 }
 }
-
+// Add this at the top of your /api/contact/route.ts
+console.log("MONGODB_URI:", process.env.MONGODB_URI ? "EXISTS" : "MISSING");
 
